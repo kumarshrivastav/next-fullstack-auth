@@ -25,5 +25,3 @@ try {
     return NextResponse.json({error:error.message},{status:500})
 }
 }
-
-// const searchUrl = window.location.search.split("=")[1];

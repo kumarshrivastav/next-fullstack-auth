@@ -17,7 +17,7 @@ export default function ResetPassword(){
             const {data}=await axios.post("/api/user/resetpassword/bymail",password)
             toast.success(data.message)
             console.log(data)
-            return router.push("http://localhost:3000/login")
+            return router.push(`${process.env.DOMAIN_NAME}/login`)
           } catch (error:any) {
             toast.error(error.response.data.error)
             return console.log(error)
